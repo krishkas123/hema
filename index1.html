@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/RecipeLogo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>NUTRINOURISH</title>
+</head>
+<body>
+
+    <!--- Navigation Bar -->
+    <div class="header">
+        <nav class="nav-bar">
+            <div class="navbar">
+                <a href="#">Home</a> 
+                <a href="./about.html">About</a> 
+                <a href="./receipes.html">Receipes</a> 
+                <a href="./personalexp.html">Personal Experience</a>
+                 </div>
+        <div class="title">
+         <h1>NUTRINOURISH</h1>
+     <P>A little caution today keeps the allergies away tomorrow</P></div>
+           <a href="#" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a> 
+            
+        </nav>
+        <!-- Search Bar -->
+        
+        <div class="search-wrapper">
+            <div class="fa fa-search"></div>
+            <input type="text" name=""  id="search" placeholder="What Allergy details you want?" onkeyup="search()">
+            <div class="fa fa-times" onclick="clearInput()" ></div>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+        <div class="result">
+            <h1>Your Search Result: </h1>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="card-grid" >
+            <div class="food-list" id="food-list">
+                    <p id="none" style="display: none;">Sorry, the food you were looking for was not available.</p>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                           <!-- <img src="./img/Sisig.webp"> -->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Alpha-Gal Syndrome </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="getRecipeDetails()"> More info >> </button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                           <!-- <img src="./img/Adobo.webp">-->
+                        </div> 
+                        <div class="card-body" >
+                        <h3> Food Protein-Induced<br>Enterocolitis Syndrome </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get2ndRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Porkchop.webp">-->
+                        </div>
+                        <div class="card-body" >
+                            <h3> Oral Allergy Syndrome<br>(OAS) </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get3rdRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                           <!-- <img src="./img/Omelette.webp">-->
+                        </div>
+                        <div class="card-body" >
+                            <h3> Red Meat Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get4thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                           <!-- <img src="./img/Sinigang.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Peanut Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get5thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                           <!-- <img src="./img/Lumpia.webp">
+ -->                       </div>
+                        <div class="card-body" >
+                        <h3> Tree Nut Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get6thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Longanisa.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Shellfish Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get7thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Burger.webp">
+  -->                      </div>
+                        <div class="card-body" >
+                        <h3> Celery Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get8thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Menudo.webp">
+                 -->       </div>
+                        <div class="card-body" >
+                        <h3> Peach Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get9thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Tapsilog.webp">
+               -->         </div>
+                        <div class="card-body" >
+                        <h3> Fish Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get10thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Milk Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get11thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Wheat Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get12thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Soy Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get13thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Corn allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get14thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Mustard Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get15thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Avocado Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get16thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Aquafloral Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get17thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Aerofluff Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get18thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Aromafruit Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get19thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Aerozyme Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get20thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Luminopollen Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get21thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Spectrumsap Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get22thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Blossomspore Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get23thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Glowberry Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get24thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <!--<img src="./img/Potato-Breakfast-Skillet.webp">-->
+                        </div>
+                        <div class="card-body" >
+                        <h3> Petalpuff Allergy </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get25thRecipe()">More info >></button>
+                        </div>
+                    </div>
+                     </div> 
+
+            <!--Ending of Main Content-->
+
+            <!--Recipe Details-->
+            <div class = "meal-detail" id="meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name"> Alpha-Gal Syndrome </h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided:</h3>
+                        <p class="meal-descript-about">&nbsp; &nbsp;&nbsp; &nbsp; Meat such as beef, pork, lamb, and venison &nbsp; &nbsp;&nbsp; &nbsp;</p>
+                    </div>
+                    <div class = "meal-instruct">
+                        
+                        <h3>Description:</h3>
+                        <p>This allergy is triggered by the consumption of mammalian meat due to a reaction to a carbohydrate called alpha-gal. Some individuals with this syndrome may also react to products containing gelatin, which is derived from animal collagen.
+                            <br></p>
+                
+                    </div>
+                   
+                </div>
+            </div>
+            <div class = "second-meal-detail" id="second-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Food Protein-Induced Enterocolitis Syndrome</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about"> Food to be avoided </h3>
+                        <p class="meal-descript-about"> cow's milk, soy, rice, oats, and certain grains. </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3> Description: </h3>
+                        <p>FPIES is a type of food allergy that primarily affects infants and young children. It typically involves delayed gastrointestinal symptoms, such as severe vomiting, diarrhea, and dehydration, triggered by specific food proteins.
+                            <br>
+                        </p>
+                        
+                    </div>
+                   
+                </div>
+            </div>  
+            <div class = "third-meal-detail" id="third-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name"> Oral Allergy Syndrome (OAS) </h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">apples, bananas, and celery.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p>OAS is a type of food allergy that occurs in individuals with pollen allergies, particularly to birch, ragweed, or grass pollen. It causes itching or swelling of the mouth, lips, tongue, and throat after consuming certain raw fruits, vegetables, or nuts that contain proteins similar to those found in pollen. 
+                            <br>
+                        </p>
+                       
+                
+                    </div>
+                   
+                </div>
+            </div>  
+            <div class = "four-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Red Meat Allergy</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">beef, lamb, and pork.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p>Similar to alpha-gal syndrome, some individuals develop an allergy specifically to red meats due to a reaction to alpha-gal. This allergy can cause delayed allergic reactions, including hives, itching, and gastrointestinal symptoms, several hours after consuming red meat.
+                            <br>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>  
+            <div class = "five-meal-detail" id="five-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name"> Peanut Allergy </h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">Peanuts, peanut butter, peanut oil, peanut flour.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p> Allergic reaction to peanuts, a legume belonging to the same family as soybeans and peas. It can trigger mild to severe allergic reactions, including anaphylaxis.
+                            <br>
+                        </p>
+                
+                    </div>
+                   
+                </div>
+            </div> 
+            <div class = "six-meal-detail" id="six-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Tree Nut Allergy</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">Almonds, walnuts, cashews, pistachios, Brazil nuts,hazelnuts.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p> Allergic reaction to tree nuts, which include almonds, walnuts, cashews, pistachios, and Brazil nuts. It can cause allergic reactions ranging from mild to severe, including anaphylaxis.
+                            <br>
+                        </p>
+                        
+                
+                    </div>
+                   
+                </div>
+            </div> 
+            <div class = "seven-meal-detail" id="seven-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Shellfish Allergy</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">Shrimp, crab, lobster, clams, mussels, oysters, scallops, squid.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p> Allergic reaction to shellfish, including crustaceans (shrimp, crab, lobster) and mollusks (clams, mussels, oysters). It can cause symptoms ranging from mild itching to life-threatening anaphylaxis.
+                            <br>
+                        </p>
+                
+                    </div>
+                    
+                </div>
+            </div> 
+            <div class = "eight-meal-detail" id="eight-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Celery Allergy</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">Raw celery, cooked celery, celery seeds, celery salt.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p>Allergic reaction to proteins found in celery. It can cause symptoms ranging from mild itching to severe anaphylaxis.
+                            <br>
+                           
+                        </p>
+                        
+                
+                    </div>
+                    
+                </div>
+            </div> 
+            <div class = "nine-meal-detail" id="nine-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Peach Allergy</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">Fresh peaches, canned peaches, peach juice.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p> Allergic reaction to proteins found in peaches. It can cause symptoms ranging from mild itching to severe anaphylaxis.
+                            <br>
+                        </p>
+                
+                    </div>
+                   
+                </div>
+            </div> 
+            <div class = "ten-meal-detail" id="ten-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Fish Allergy</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">Salmon, tuna, cod, halibut, tilapia, catfish, trout, anchovies.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p>Allergic reaction to various types of fish, including freshwater and saltwater varieties such as salmon, tuna, and cod. It can cause symptoms ranging from mild hives to severe anaphylaxis.
+                            <br>
+                        </p>
+                
+                    </div>
+                    
+                </div>
+            </div> 
+            <div class = "eleven-meal-detail" id="eleven-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Milk Allergy</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Food to be avoided</h3>
+                        <p class="meal-descript-about">Cow's milk, cheese, yogurt, butter, cream, ice cream.
+
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Description:</h3>
+                        <p> <br>Allergic reaction to proteins found in cow's milk, including casein and whey. It is one of the most common food allergies in children but can also affect adults. Symptoms can range from mild to severe.
+                        </p>
+                
+                    </div>
+                   
+                </div>
+            </div> <div class = "twelve-meal-detail" id="twelve-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Wheat Allergy</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about"> Food to be avoided </h3>
+                        <p class="meal-descript-about"> Wheat-based products, including bread, pasta, cereals.                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3> Description: </h3>
+                        <p>Allergic reaction to proteins found in wheat, such as gluten. It can cause symptoms ranging from mild gastrointestinal discomfort to severe anaphylaxis.
+                            <br>
+                        </p>
+                        
+                    </div>
+                   
+                </div>
+            </div>  
+         <div class = "thirteen-meal-detail" id="thirteen-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Soy Allergy</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about"> Food to be avoided </h3>
+                    <p class="meal-descript-about"> Soybeans, soy milk, tofu, tempeh, soy sauce, soy flour
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3> Description: </h3>
+                    <p>Allergic reaction to proteins found in soybeans. It can cause symptoms ranging from mild hives to severe anaphylaxis.
+                        <br>
+                    </p>
+                    
+                </div>
+               
+            </div>
+        </div>
+    <div class = "fourteen-meal-detail" id="fourteen-meal-detail">
+        <!-- recipe close btn -->
+        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+            <i class ="fas fa-times"></i>
+        </button>
+
+        <!-- recipe details -->
+        <div class="meal-content">
+            <h2 class="meal-name">Corn allergy</h2>
+            <div class="meal-about">
+                <h3 class="meal-title-about"> Food to be avoided </h3>
+                <p class="meal-descript-about"> cornstarch, corn syrup, cornmeal, corn oil.
+                </p>
+            </div>
+            <div class = "meal-instruct">
+                <h3> Description: </h3>
+                <p>Allergic reaction to proteins found in corn. It can cause symptoms ranging from mild gastrointestinal discomfort to severe anaphylaxis.
+                    <br>
+                </p>
+                
+            </div>
+           
+        </div>
+    </div>
+
+<div class = "fifteen-meal-detail" id="fifteen-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Mustard Allergy</h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Mustard seeds, mustard powder, mustard oil.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to proteins found in mustard seeds. It can cause symptoms ranging from mild hives to severe anaphylaxis.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+ <div class = "sixteen-meal-detail" id="sixteen-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Avocado Allergy</h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Fresh avocados, guacamole, avocado oil
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to proteins found in avocados. It can cause symptoms ranging from mild itching to severe anaphylaxis.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+<div class = "seventeen-meal-detail" id="seventeen-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Aquafloral Allergy</h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Water lilies, lotus root, floral teas containing aquatic flowers.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to a compound found in aquatic flowers. Symptoms may include skin rash, respiratory distress, and swelling.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+<div class = "eighteen-meal-detail" id="eighteen-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Aerofluff Allergy</h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Cotton candy, meringue, marshmallows.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to airborne fluffy particles. Symptoms may include sneezing, itchy eyes, and throat irritation.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+ <div class = "nineteen-meal-detail" id="nineteen-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Aromafruit Allergy</h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Mangoes, pineapples, oranges, strawberries.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to fragrant fruits. Symptoms may include nasal congestion, headaches, and skin rash.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+ <div class = "twenty-meal-detail" id="twenty-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Aerozyme Allergy        </h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Sprouted grains, fermented foods, bread dough.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to airborne enzymes. Symptoms may include coughing, wheezing, and shortness of breath.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+ <div class = "twentyone-meal-detail" id="twentyone-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Luminopollen Allergy
+        </h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Sunflower seeds, chia seeds, poppy seeds.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to luminescent pollen. Symptoms may include itchy eyes, runny nose, and fatigue
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+<div class = "twentytwo-meal-detail" id="twentytwo-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Luminopollen Allergy
+        </h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Maple syrup, birch water, saps from rainbow eucalyptus.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to the sap of colorful trees. Symptoms may include skin irritation, redness, and blisters.
+                 <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+ <div class = "twentythree-meal-detail" id="twentythree-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Blossomspore Allergy.
+        </h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Honey, bee pollen, flower-infused teas.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to pollen from blooming flowers. Symptoms may include sneezing, congestion, and watery eyes.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+
+ <div class = "twentyfour-meal-detail" id="twentyfour-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Glowberry Allergy.
+        </h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Goji berries, lingonberries, acai berries.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to a luminescent berry extract. Symptoms may include tingling sensation, numbness, and dizziness.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+<div class = "twentyfive-meal-detail" id="twentyfive-meal-detail">
+    <!-- recipe close btn -->
+    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+        <i class ="fas fa-times"></i>
+    </button>
+
+    <!-- recipe details -->
+    <div class="meal-content">
+        <h2 class="meal-name">Petalpuff Allergy.
+        </h2>
+        <div class="meal-about">
+            <h3 class="meal-title-about"> Food to be avoided </h3>
+            <p class="meal-descript-about"> Edible flowers, flower petal garnishes, floral-infused dishes.
+            </p>
+        </div>
+        <div class = "meal-instruct">
+            <h3> Description: </h3>
+            <p>Allergic reaction to pollen-like particles released by blossoming petals. Symptoms may include coughing, throat irritation, and difficulty breathing.
+                <br>
+            </p>
+            
+        </div>
+    </div>
+</div>
+ </div>
+            <!--Ending of Recipe Details-->
+
+            <!--Footer-->
+    <div class="footer">
+        <div class="social-btn">
+            <a href="#" target="_blank" ><i class="	fab fa-facebook"></i></a>
+            <a href="#" target="_blank" ><i class="	fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="	fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" ><i class="	fab fa-github"></i></a>
+        </div>
+            <div class="quick-bar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        <p>Guru@gmail.com</p>  
+    </div>
+
+    <!--Ending of Footer-->
+
+<!--Script for Javascript-->
+<script src="./assets/index.js"></script>
+</body>
+</html>

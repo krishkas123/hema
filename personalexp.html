@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Experiences with Food Allergies</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            background-image: url(./img/personalexp.jpg);
+            background-size: cover;
+            
+        }
+        .title{
+            font-size: 30px;
+            font-weight: bolder;
+            font-style: oblique;
+            color:wheat;
+            
+        }
+        .experience-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease;
+        }
+        .experience-card:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            color: #007bff;
+            text-align: center;
+        }
+        h3 {
+            color: #6c757d;
+        }
+        p {
+            color: #666;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <marquee scrollamount="20s"><h2 class="title">Personal Experiences with Food Allergies</h2></marquee>
+        <div class="row">
+            <!-- Emily's Story -->
+            
+            <div class="col-md-6">
+                <div class="experience-card">
+                    <h3 style="color:#333">Emily</h3>
+                    <p>At a birthday party, Emily accidentally ate a slice of cake containing peanuts. Within minutes, her face swelled, and she struggled to breathe. Quick action from her friends saved her with an epinephrine shot.</p>
+                </div>
+            </div>
+            <!-- Michael's Story -->
+            <div class="col-md-6">
+                <div class="experience-card">
+                    <h3 style="color:#333">Michael</h3>
+                    <p>During a family dinner, Michael's aunt unknowingly used peanut oil in a dish. His throat began to close, but his sister recognized the signs and rushed him to the ER, where he received treatment and got well successfully</p>
+                </div>
+            </div>
+            <!-- Sophie's Story -->
+            <div class="col-md-6">
+                <div class="experience-card">
+                    <h3 style="color:#333">Sophie</h3>
+                    <p>Sophie experienced her first allergic reaction at a restaurant when she was served a salad with hidden traces of shellfish. Her parents, who were with her, had to swiftly intervene with medication.</p>
+                </div>
+            </div>
+            <!-- Alex's Story -->
+            <div class="col-md-6">
+                <div class="experience-card">
+                    <h3 style="color:#333">Alex</h3>
+                    <p>Alex's allergy to dairy became evident when he ate a dessert at a school event. He broke out in hives and experienced stomach cramps, prompting his teacher to call for medical assistance.</p>
+                </div>
+            </div>
+            <!-- Jessica's Story -->
+            <div class="col-md-6">
+                <div class="experience-card">
+                    <h3 style="color:#333">Jessica</h3>
+                    <p>Jessica's severe gluten allergy led to an accidental exposure at a friend's house. She ended up in the hospital, but the incident prompted her friend group to educate themselves about food allergies and take precautions.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="experience-card">
+                    <h3 style="color:#333">Mugu</h3>
+                    <p>Mugu's Growing up with a dairy allergy meant I had to be extra cautious about what I ate. One time, at a friend's birthday party, I accidentally ingested a slice of pizza with cheese hidden under the toppings.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
