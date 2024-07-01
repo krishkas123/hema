@@ -75,7 +75,7 @@ body{
 .header{
     width: 100%;
     height: 800px;
-    background-image: url('../img/home.jpeg');
+    background-image: url('./img/home.jpeg');
     background-size: cover;
     background-position: center;
 }
